@@ -1,10 +1,11 @@
 <script>
-
 import CardList from "./CardsList.vue"
 
 export default {
 
-    components: { CardList }
+    components: { CardList },
+
+
 }
 
 </script>
