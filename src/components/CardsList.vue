@@ -17,13 +17,11 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row row-cols-5">
-            <!-- Ciclato array "cards" che si trova dentro store   -->
-            <!-- Fatto il bind delle proprietà specifiche da riportare nel componente CARD -->
-            <Card v-for="card in store.cards" :pic="card.card_images[0].image_url" :name="card.name"
-                :archetype="card.archetype" />
-        </div>
+    <div class="row row-cols-5 gy-2">
+        <!-- Ciclato array "cards" che si trova dentro store   -->
+        <!-- Fatto il bind delle proprietà specifiche da riportare nel componente CARD -->
+        <Card v-for="card in store.cards" :pic="card.card_images[0].image_url" :name="card.name"
+            :archetype="card.archetype" />
     </div>
 </template>
 
