@@ -1,11 +1,14 @@
 <script>
 import Card from "./Card.vue"
-
+// Importato lo store contenente le Cards = Array
+import { store } from "../data/store"
 
 
 export default {
     data() {
         return {
+            // Inserito lo store per essere letto
+            store,
         }
     },
 
@@ -16,15 +19,12 @@ export default {
 <template>
     <div class="container">
         <div class="row row-cols-5">
-            <div v-for="card in Cards" class="col">
-                <img :src="card.card_images[0].image_url" alt="card" class="img-fluid">
-                <h3>{{ card.name }}</h3>
-                <p>{{ card.archetype }}</p>
-            </div>
+            <!-- Ciclato array "cards" che si trova dentro store   -->
+            <!-- Fatto il bind delle proprietà specifiche da riportare nel componente CARD -->
+            <Card v-for="card in store.cards" :pic="card.card_images[0].image_url" :name="card.name"
+                :archetype="card.archetype" />
         </div>
     </div>
-
-    <Card />
 </template>
 
 <style lang="scss" scoped></style>
