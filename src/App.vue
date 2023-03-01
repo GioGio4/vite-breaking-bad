@@ -1,9 +1,15 @@
 <script>
+import AppMain from "./components/AppMain.vue"
+
+export default {
+
+  components: { AppMain }
+}
 
 </script>
 
 <template>
-  <h1 class="my-5">Benvenuto</h1>
+  <AppMain />
 </template>
 
 <style lang="scss"></style>
